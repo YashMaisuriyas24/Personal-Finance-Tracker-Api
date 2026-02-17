@@ -1,0 +1,22 @@
+[project]
+name = "personal-finance-tracker-api"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "YashMaisuriyas24",email = "yashmaisuriyas04@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.129.0,<0.130.0)",
+    "pydentic (>=0.0.1.dev3,<0.0.2)",
+    "pymongo (>=4.16.0,<5.0.0)",
+    "uvicorn (>=0.41.0,<0.42.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "db (>=0.1.1,<0.2.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
