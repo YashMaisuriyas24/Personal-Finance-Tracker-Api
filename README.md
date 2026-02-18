@@ -2,7 +2,7 @@
 
 A production-ready, asynchronous REST API built with **FastAPI** and **MongoDB**. This application provides comprehensive financial management, featuring advanced aggregations, full-text search, and ACID-compliant category management.
 
-## 🚀 Features
+##  Features
 - **Transaction Management**: Full CRUD for income and expenses with strict Pydantic v2 validation.
 - **Advanced Filtering**: Simultaneous filtering by category, date range, type, and tags.
 - **Monthly Insights**: Advanced MongoDB aggregation pipelines for detailed financial health reports.
@@ -10,7 +10,7 @@ A production-ready, asynchronous REST API built with **FastAPI** and **MongoDB**
 - **Atomic Category Deletion**: Uses MongoDB sessions (transactions) to safely reassign transactions to "uncategorized" and log an audit trail when a category is removed.
 - **Programmatic Indexing**: All database indexes are automatically verified and created on application startup.
 
-## 🛠 Tech Stack
+##  Tech Stack
 - **Python**: v3.13
 - **Framework**: FastAPI
 - **Database**: MongoDB (Motor Driver for Async support)
@@ -19,7 +19,7 @@ A production-ready, asynchronous REST API built with **FastAPI** and **MongoDB**
 
 ---
 
-## 📑 Schema Design & Justifications
+## Schema Design & Justifications
 
 ### 1. Transactions Collection
 - **Date Storage**: Stored as native `datetime` objects to allow high-performance range queries and native aggregation operators ($month, $year).
@@ -32,7 +32,7 @@ A production-ready, asynchronous REST API built with **FastAPI** and **MongoDB**
 
 ---
 
-## 🔍 Indexing Strategy
+##  Indexing Strategy
 Indexes are created programmatically on startup within `db1_.py`.
 
 | Index Key | Collection | Type | Purpose |
@@ -45,7 +45,7 @@ Indexes are created programmatically on startup within `db1_.py`.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 ```text
 Personal-Finance-Tracker-Api/
 ├── api_/                       # API Routing & Controllers
