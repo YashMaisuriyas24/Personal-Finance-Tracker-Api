@@ -10,8 +10,11 @@ db = DB()
 @app.post("/transactions")
 def create_transaction(transaction: TransactionCreate):
     data = transaction.model_dump()
-    result = db.create_transaction(data)
-    return {"message": result}
+    new_id = db.create_transaction(data)
+    return {
+        "message": "Transaction Created",
+        "id": new_id
+    }
 
 
 @app.get("/transactions")
@@ -50,7 +53,6 @@ def update_transaction(transaction_id: str, transaction: TransactionCreate):
 def delete_transaction(transaction_id: str):
     db.delete_transaction(ObjectId(transaction_id))
     return {"message": "Transaction Deleted"}
-
 
 
 @app.post("/categories")
